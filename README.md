@@ -65,4 +65,6 @@ Terminal 中执行命令 `javah 包名.xxx.class` ，执行这一命令需要将
 
 ## 四、 打包生成 .so 文件
 
-应该是在jni目录中新建Application.mk文件，然后在其中进行配置，这里还没有实验
+将项目直接运行后，会在 `app/build/intermediates/cmake/` 目录下自动生成 so 文件。
+
+之后可以拷贝 `so 文件` 和 `对应的java文件` 到其它项目使用，java 文件的包名要和这个原始项目的包名完全一致。实例化 JniTest 类对象，就可以使用其中的方法。
